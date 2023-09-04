@@ -1,0 +1,3 @@
+D:/JetBrains/CLionProjects/HanAng_BetaBox/cmake-build-debug/CMakeFiles/HanAng_BetaBox.elf.dir
+D:/JetBrains/CLionProjects/HanAng_BetaBox/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/JetBrains/CLionProjects/HanAng_BetaBox/cmake-build-debug/CMakeFiles/rebuild_cache.dir
