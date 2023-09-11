@@ -45,7 +45,7 @@
 uint8_t LINCommunication[] = {0x4c, 0x49, 0x4e, 0x20, 0xcd, 0xa8, 0xd0, 0xc5, 0xa3, 0xba};
 uint8_t current_step_init[] = {0xb5, 0xb1, 0xc7, 0xb0, 0xb2, 0xbd, 0xca, 0xfd, 0xa3, 0xba};
 uint8_t InitializationState[] = {0xb3, 0xf5, 0xca, 0xbc, 0xbb, 0xaf, 0xa3, 0xba};
-uint8_t EXVState[] = {0x45, 0x58, 0x56, 0x20, 0xd7, 0xb4, 0xcc, 0xac, 0xa3, 0xba};
+uint8_t TargetSteps[] = {0xc4, 0xbf, 0xb1, 0xea, 0xb2, 0xbd, 0xca, 0xfd, 0xa3, 0xba};
 uint8_t unusual[] = {0xd2, 0xec, 0xb3, 0xa3};
 uint8_t normal[] = {0xd5, 0xfd, 0xb3, 0xa3};
 
@@ -161,11 +161,11 @@ void LCDInit(void)
     HAL_Delay(1);
 
     uint8_t size = sizeof(LINCommunication) / sizeof(uint8_t);
-    DisplayChineseCharacter(0x80,LINCommunication,size);
+    DisplayChineseCharacter(FIRST_LINE,LINCommunication,size);
     size = sizeof(current_step_init) / sizeof(uint8_t);
-    DisplayChineseCharacter(0x90,current_step_init,size);
+    DisplayChineseCharacter(SECOND_LINE,current_step_init,size);
     size = sizeof(InitializationState) / sizeof(uint8_t);
-    DisplayChineseCharacter(0x88,InitializationState,size);
-//    size = sizeof(EXVState) / sizeof(uint8_t);
-//    DisplayChineseCharacter(0x98,EXVState,size);
+    DisplayChineseCharacter(THIRD_LINE,InitializationState,size);
+    size = sizeof(TargetSteps) / sizeof(uint8_t);
+    DisplayChineseCharacter(FOURTH_LINE,TargetSteps,size);
 }

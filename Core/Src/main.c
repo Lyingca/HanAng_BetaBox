@@ -119,6 +119,10 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+        //检测步数加
+        Operation_Key_Scan(Step_Add_GPIO_Port,Step_Add_Pin,1);
+        //检测步数减
+        Operation_Key_Scan(Step_Sub_GPIO_Port,Step_Sub_Pin,0);
         //检测复位按钮
         if (General_Key_Scan(Init_Key_GPIO_Port,Init_Key_Pin))
         {
@@ -144,6 +148,10 @@ int main(void)
             EXV_finished = 0;
             Data_To_LIN(1,0);
             ResetFlag = 1;
+        }
+        if (General_Key_Scan(Start_Key_GPIO_Port,Start_Key_Pin))
+        {
+            Data_To_LIN(currentStepSize,0);
         }
         if(EXV_finished == 1 && ResetFlag == 1)
         {

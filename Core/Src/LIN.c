@@ -223,15 +223,12 @@ void LIN_Data_Process(uint8_t RxLength)
         {
             EXV_finished = 1;
             DisplayCharacter(SECOND_LINE + 5,EXV_Run_Step,3);
-
         }
     }
     else
     {
         //LCD显示屏第三行显示初始化结束
         DisplayChineseCharacter(THIRD_LINE + 4,"Finished", strlen("Finished"));
-        //LCD显示屏第四行显示EXV正在运动中
-//        DisplayChineseCharacter(FOURTH_LINE + 5,"Moving", strlen("Moving"));
         //计算电机转动步长，步长低字节在前高字节在后
         EXV_Run_Step = (pLINRxBuff[6] << 8) | pLINRxBuff[5];
         //LCD显示屏第二行显示当前步数

@@ -14,15 +14,11 @@
  */
 #define KEY_ON    1
 #define KEY_OFF   0
-#define STEP_DIGITAL 1
-#define LOOP_DIGITAL 0
 
 //当前步长
 extern uint16_t currentStepSize;
-//当前循环次数
-extern uint16_t currentCycleCount;
 
 uint8_t General_Key_Scan(GPIO_TypeDef * GPIOx,uint16_t GPIO_Pin);
-void Operation_Key_Scan(GPIO_TypeDef * GPIOx,uint16_t GPIO_Pin,uint8_t step,uint8_t step_loop);
+void Operation_Key_Scan(GPIO_TypeDef * GPIOx,uint16_t GPIO_Pin,uint8_t step);
 
 #endif //PRODUCTMANUALTEST_KEY_H

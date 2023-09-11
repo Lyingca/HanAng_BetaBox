@@ -93,10 +93,16 @@ void UART_IDLECallBack(UART_HandleTypeDef *huart);
 #define LCD_RS_GPIO_Port GPIOC
 #define Step300_Key_Pin GPIO_PIN_5
 #define Step300_Key_GPIO_Port GPIOD
+#define Step_Add_Pin GPIO_PIN_3
+#define Step_Add_GPIO_Port GPIOB
 #define LongReset_Key_Pin GPIO_PIN_4
 #define LongReset_Key_GPIO_Port GPIOB
 #define ShortReset_Key_Pin GPIO_PIN_6
 #define ShortReset_Key_GPIO_Port GPIOB
+#define Step_Sub_Pin GPIO_PIN_7
+#define Step_Sub_GPIO_Port GPIOB
+#define Start_Key_Pin GPIO_PIN_8
+#define Start_Key_GPIO_Port GPIOB
 #define Init_Key_Pin GPIO_PIN_9
 #define Init_Key_GPIO_Port GPIOB
 
