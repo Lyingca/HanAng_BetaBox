@@ -53,7 +53,9 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+void ms_Delay(uint16_t t_ms);
+void Util_Receive_IT(UART_HandleTypeDef *huart);
+void UART_IDLECallBack(UART_HandleTypeDef *huart);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
@@ -89,20 +91,14 @@ void Error_Handler(void);
 #define LCD_WR_GPIO_Port GPIOA
 #define LCD_RS_Pin GPIO_PIN_8
 #define LCD_RS_GPIO_Port GPIOC
-#define Finished_Key_Pin GPIO_PIN_5
-#define Finished_Key_GPIO_Port GPIOD
-#define Init_Key_Pin GPIO_PIN_3
+#define Step300_Key_Pin GPIO_PIN_5
+#define Step300_Key_GPIO_Port GPIOD
+#define LongReset_Key_Pin GPIO_PIN_4
+#define LongReset_Key_GPIO_Port GPIOB
+#define ShortReset_Key_Pin GPIO_PIN_6
+#define ShortReset_Key_GPIO_Port GPIOB
+#define Init_Key_Pin GPIO_PIN_9
 #define Init_Key_GPIO_Port GPIOB
-#define Step_Add_Pin GPIO_PIN_4
-#define Step_Add_GPIO_Port GPIOB
-#define Step_Sub_Pin GPIO_PIN_6
-#define Step_Sub_GPIO_Port GPIOB
-#define Loop_Add_Pin GPIO_PIN_7
-#define Loop_Add_GPIO_Port GPIOB
-#define Loop_Sub_Pin GPIO_PIN_8
-#define Loop_Sub_GPIO_Port GPIOB
-#define Start_Key_Pin GPIO_PIN_9
-#define Start_Key_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
